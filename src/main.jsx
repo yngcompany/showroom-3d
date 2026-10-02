@@ -3,6 +3,8 @@ import { createRoot } from 'react-dom/client'
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Environment, Float, OrbitControls, RoundedBox, Text } from '@react-three/drei'
 import './styles.css'
+import './spatial.css'
+import SpatialExperience from './SpatialExperience'
 
 function Arch({ position, color = '#d3ff44' }) {
   return <group position={position}>
@@ -62,4 +64,4 @@ function App() {
   </main>
 }
 
-createRoot(document.getElementById('root')).render(<App />)
+createRoot(document.getElementById('root')).render(<SpatialExperience />)
